@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SkillSwap for Survival</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <h1>SkillSwap for Survival</h1>
+      <p class="subtitle">Like Uber for human help during emergencies.</p>
+
+      <section>
+        <h2>Register as Volunteer</h2>
+        <form id="volunteer-form">
+          <label>Name <input name="name" required /></label>
+          <label>Phone <input name="phone" /></label>
+          <label>Skills (comma separated)
+            <input name="skills" placeholder="First Aid, Electric Repair" required />
+          </label>
+          <div class="location-row">
+            <button type="button" id="volunteer-location-btn">Use My Location</button>
+            <span id="volunteer-location-status">Location not captured.</span>
+          </div>
+          <button type="submit">Register Volunteer</button>
+        </form>
+      </section>
+
+      <section>
+        <h2>Create Emergency Request</h2>
+        <form id="emergency-form">
+          <label>Your Name <input name="requesterName" required /></label>
+          <label>Your Phone <input name="requesterPhone" /></label>
+          <label>Required Skill
+            <select name="skill" required>
+              <option value="">Select a skill</option>
+              <option>First Aid</option>
+              <option>Electric Repair</option>
+              <option>Food Supply</option>
+              <option>Vehicle Transport</option>
+            </select>
+          </label>
+          <label>Notes <textarea name="notes" rows="3"></textarea></label>
+          <div class="location-row">
+            <button type="button" id="emergency-location-btn">Use My Location</button>
+            <span id="emergency-location-status">Location not captured.</span>
+          </div>
+          <button type="submit">Send Emergency Alert</button>
+        </form>
+      </section>
+
+      <section>
+        <h2>Dispatch Result</h2>
+        <pre id="output">No alert sent yet.</pre>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>

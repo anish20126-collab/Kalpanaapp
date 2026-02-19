@@ -1,0 +1,10 @@
+{
+  "name": "skillswap-survival",
+  "version": "1.0.0",
+  "description": "Hyperlocal crisis skill exchange network",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  }
+}
